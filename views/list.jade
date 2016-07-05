@@ -1,0 +1,13 @@
+extend layout
+block content
+
+	.row
+		.col.s12
+			.collection
+				each e in events 
+					.collection-item
+						a(href="events/#{e.id}")
+							h5 #{e.name}
+							p #{e.location} | #{moment(e.date).format("DD.MM.YYYY")} von #{e.from} bis #{e.to}
+							each category in e.category
+								.chip #{category}

@@ -1,0 +1,19 @@
+{
+	"name": "termine",
+	"description": "alle termien an einem ort",
+	"version": "0.0.1",
+	"private": true,
+	"dependencies": {
+		"coffee-script": "latest",
+		"express": "3.x",
+		"mongoose": "latest",
+		"jade": "1.11.x",
+    "stylus": "0.54.x",
+    "nib": "1.1.x",
+    "moment": "latest",
+    "gridfs-stream": "latest"
+	},
+	"scripts": {
+    "start": "coffee -w app.coffee"
+  }
+}

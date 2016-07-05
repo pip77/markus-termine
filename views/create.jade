@@ -1,0 +1,53 @@
+extend layout
+block content
+
+	.row
+		form.col.s12.create(action="api/events", method="post", enctype='application/json')
+			.row
+				.input-field.col.s6
+					input#name.validate(name='name' type='text')
+					label(for='name') Titel
+				.input-field.col.s6
+					input#location.validate(name='location' type='text' value='Hamburg')
+					label(for='location') Stadt
+			.row
+				.input-field.col.s6
+					input.datepicker(name='date' type='date')
+					label(for='date') Wann?
+				.input-field.col.s3
+					input(type="time" name="from")
+				.input-field.col.s3
+					input(type="time" name="to")
+			.row
+				.input-field.col.s6
+					select#category(name='category' multiple='')
+						option(value='', disabled='', selected='') Kategorie wählen
+						option(value='Sport & Freizeit') Sport & Freizeit
+						option(value='Konzert') Konzert
+						option(value='Musik') Musik
+					label Kategorie
+				.input-field.col.s6
+					select#amount(name='amount')
+						option(value='1') Kostenlos
+						option(value='2') €
+						option(value='3') €€
+					label Kosten
+			.row
+				.input-field.col.s6
+					textarea#teaser.materialize-textarea(name='teaser' length='120')
+					label(for='teaser') Teasertext
+				.input-field.col.s6
+					textarea#teaser.materialize-textarea(name='long' length='240')
+					label(for='long') Ausführliche Beschreibung
+			.row
+				.input-field.col.s12
+					.file-field.input-field
+						.btn
+							span File
+							input(name='file' type='file')
+						.file-path-wrapper
+							input.file-path.validate(type='text')
+
+			.row
+				button.btn-large.waves-effect.waves-light(type='submit')
+					| Event Eintragen!

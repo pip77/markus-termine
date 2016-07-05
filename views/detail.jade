@@ -1,0 +1,10 @@
+extend layout
+block content
+
+	.row
+		.col.s12
+			p #{e.location} | #{moment(e.date).format("DD.MM.YYYY")} von #{e.from} bis #{e.to} | #{e.amount}
+			each category in e.category
+				.chip #{category}
+			p #{e.teaser}
+			p #{e.long}
