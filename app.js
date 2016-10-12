@@ -21,7 +21,7 @@ compile = function(str, path) {
 
 app.configure(function() {
   app.set('port', process.env.PORT || 4000);
-  app.set('storage-uri', process.env.MONGOHQ_URL || 'mongodb://events:stneve@ds011765.mlab.com:11765/events' || 'mongodb://localhost/events');
+  app.set('storage-uri', process.env.MONGOHQ_URL || 'mongodb://localhost/events');
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.set('views', __dirname + '/views');

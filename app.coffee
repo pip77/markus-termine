@@ -16,7 +16,6 @@ app.configure ->
 	# app.set 'storage', process.env.MONGOHQ_URL or 'mongodb://localhost/events'
 	app.set 'storage-uri',
 		process.env.MONGOHQ_URL or
-		'mongodb://events:stneve@ds011765.mlab.com:11765/events' or
 		'mongodb://localhost/events'
 	app.use express.bodyParser()
 	app.use express.methodOverride()
